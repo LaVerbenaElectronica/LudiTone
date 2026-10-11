@@ -49,7 +49,7 @@ function stopAll() {
   Object.keys(activeLoops).forEach(id => {
     try {
       Tone.Transport.clear(activeLoops[id].id);
-    } catch (e) {}
+    } catch (e) { }
   });
   activeLoops = {};
 }
@@ -69,14 +69,14 @@ async function runCode(isLiveUpdate = false) {
     if (!currentTopBlockIds.has(id)) {
       try {
         Tone.Transport.clear(activeLoops[id].id);
-      } catch (e) {}
+      } catch (e) { }
       // Liberar sus synths asociados de forma inmediata
       if (activeLoops[id].synths) {
         activeLoops[id].synths.forEach(s => {
           try {
             if (typeof s.releaseAll === 'function') s.releaseAll(0.1);
             s.dispose();
-          } catch(e) {}
+          } catch (e) { }
         });
       }
       delete activeLoops[id];
@@ -105,7 +105,7 @@ async function runCode(isLiveUpdate = false) {
         // Limpiar el bucle viejo del transporte
         try {
           Tone.Transport.clear(oldLoop.id);
-        } catch(e) {}
+        } catch (e) { }
 
         // Programar la liberación diferida de los synths del ciclo anterior
         const delayMs = (nextCycleStart - transportTime) * 1000 + 500;
@@ -115,7 +115,7 @@ async function runCode(isLiveUpdate = false) {
             try {
               if (typeof s.releaseAll === 'function') s.releaseAll(0.1);
               s.dispose();
-            } catch(e) {}
+            } catch (e) { }
           });
         }, Math.max(0, delayMs));
 
@@ -942,11 +942,31 @@ const toolboxFree = {
   ],
 };
 
+Blockly.Themes.Halloween = Blockly.Theme.defineTheme('halloween', {
+  base: Blockly.Themes.Classic,
+  componentStyles: {
+    workspaceBackgroundColour: '#1e1e1e',
+    toolboxBackgroundColour: '#333',
+    toolboxForegroundColour: '#fff',
+    flyoutBackgroundColour: '#252526',
+    flyoutForegroundColour: '#ccc',
+    flyoutOpacity: 1,
+    scrollbarColour: '#797979',
+    insertionMarkerColour: '#fff',
+    insertionMarkerOpacity: 0.3,
+    scrollbarOpacity: 0.4,
+    cursorColour: '#d0d0d0',
+    blackBackground: '#d0d0d0',
+  },
+});
+
+
 const workspace = Blockly.inject('blocklyDiv', {
   toolbox: toolboxFree,
   scrollbars: true,
   horizontalLayout: false,
   toolboxPosition: 'start',
+  theme: Blockly.Themes.Halloween,
   zoom: {
     controls: true,
     wheel: true,
@@ -1008,7 +1028,7 @@ function selectLevel(levelName) {
 
   // --- CONFIGURACIÓN DE ETIQUETAS DINÁMICAS ---
   Blockly.Msg['SIMPLE_NOTE_LABEL'] = (levelName === 'basic') ? 'sonido' : 'nota';
-  
+
   if (levelName === 'basic') {
     document.body.classList.add('basic-mode');
     document.getElementById('create-block-btn').style.display = 'none';
