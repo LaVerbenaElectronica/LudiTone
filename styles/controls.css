@@ -4,8 +4,8 @@
 
 .controls {
     padding: 10px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
+    background-color: #686868;
+    border-bottom: 1px solid #686868;
     display: flex;
     gap: 10px;
     position: relative;
@@ -24,11 +24,21 @@
 
 /* --- Botones individuales --- */
 
-#play-btn { background-color: #28a745; }
-#play-btn:hover { background-color: #218838; }
+#play-btn {
+    background-color: #1FC742;
+}
 
-#stop-btn { background-color: #dc3545; }
-#stop-btn:hover { background-color: #c82333; }
+#play-btn:hover {
+    background-color: #025B18;
+}
+
+#stop-btn {
+    background-color: #025B18;
+}
+
+#stop-btn:hover {
+    background-color: #023612;
+}
 
 #live-btn {
     background-color: #007bff;
@@ -45,28 +55,53 @@
 }
 
 @keyframes pulse-live {
-    0%   { transform: translateX(-50%) scale(1); }
-    50%  { transform: translateX(-50%) scale(1.05); box-shadow: 0 0 20px rgba(255, 87, 34, 0.8); }
-    100% { transform: translateX(-50%) scale(1); }
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 87, 34, 0.8);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
 }
 
 #clear-btn {
     background-color: #696969;
     margin-left: auto;
 }
-#clear-btn:hover { background-color: #525252; }
 
-#btn-menu { background-color: #343a40; }
-#btn-menu:hover { background-color: #23272b; }
+#clear-btn:hover {
+    background-color: #525252;
+}
+
+#btn-menu {
+    background-color: #343a40;
+}
+
+#btn-menu:hover {
+    background-color: #23272b;
+}
 
 #create-block-btn {
     background-color: #8b5cf6;
     margin-left: 10px;
 }
-#create-block-btn:hover { background-color: #7c3aed; }
 
-#feedback-btn { background-color: #17a2b8; }
-#feedback-btn:hover { background-color: #138496; }
+#create-block-btn:hover {
+    background-color: #7c3aed;
+}
+
+#feedback-btn {
+    background-color: #023612;
+}
+
+#feedback-btn:hover {
+    background-color: #1FC742;
+}
 
 /* --- Toast de aviso: bloque no permitido --- */
 

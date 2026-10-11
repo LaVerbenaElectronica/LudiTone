@@ -4,14 +4,16 @@
 
 /* Fondo del panel */
 .blocklyToolboxDiv {
-    background-color: #b9cadb !important;
+    background-color: #686868 !important;
     padding: 10px 5px !important;
     border-right: none !important;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Ocultar toolbox en modo básico */
-body.basic-mode .blocklyToolboxDiv { display: none !important; }
+body.basic-mode .blocklyToolboxDiv {
+    display: none !important;
+}
 
 /* Bloquear clic en el botón de categoría en modo básico
    (mantiene el flyout siempre abierto) */
@@ -58,7 +60,9 @@ body.basic-mode .blocklyTreeRow {
 }
 
 /* Ocultar separadores del árbol */
-.blocklyTreeSeparator { display: none !important; }
+.blocklyTreeSeparator {
+    display: none !important;
+}
 
 /* Subcategorías anidadas: indentación */
 .blocklyTreeChildren .blocklyTreeRow,
@@ -81,6 +85,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgb(137, 202, 255) !important;
     border-color: rgb(0, 140, 255) !important;
 }
+
 .blocklyTreeRow[data-category="Control"]:hover {
     background-color: rgba(0, 140, 255, 0.25) !important;
 }
@@ -89,6 +94,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgb(255, 126, 165) !important;
     border-color: rgb(255, 0, 76) !important;
 }
+
 .blocklyTreeRow[data-category="Efectos"]:hover {
     background-color: rgba(255, 0, 76, 0.25) !important;
 }
@@ -97,6 +103,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgb(152, 255, 118) !important;
     border-color: rgb(0, 255, 8) !important;
 }
+
 .blocklyTreeRow[data-category="Notas"]:hover {
     background-color: rgba(0, 255, 8, 0.25) !important;
 }
@@ -105,6 +112,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgba(255, 235, 59, 0.5) !important;
     border-color: rgba(255, 235, 59, 0.8) !important;
 }
+
 .blocklyTreeRow[data-category="Opciones"]:hover {
     background-color: rgba(255, 235, 59, 0.35) !important;
 }
@@ -114,6 +122,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgb(235, 124, 255) !important;
     border-color: rgb(217, 0, 255) !important;
 }
+
 .blocklyTreeRow[data-category="Mis Sonidos"]:hover {
     background-color: rgba(217, 0, 255, 0.25) !important;
 }
@@ -123,6 +132,7 @@ body.basic-mode .blocklyTreeRow {
     background-color: rgb(235, 124, 255) !important;
     border-color: rgb(217, 0, 255) !important;
 }
+
 .blocklyTreeRow[data-category="Mis Bloques"]:hover {
     background-color: rgba(217, 0, 255, 0.25) !important;
 }

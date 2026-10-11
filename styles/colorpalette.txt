@@ -1,0 +1,5 @@
+Deep Gray: #686868
+Vivid Black: #010101
+Lime Green: #1FC742
+Devil Green: #025B18
+Deep Forest Green: #023612

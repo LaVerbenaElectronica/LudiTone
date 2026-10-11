@@ -945,7 +945,7 @@ const toolboxFree = {
 Blockly.Themes.Halloween = Blockly.Theme.defineTheme('halloween', {
   base: Blockly.Themes.Classic,
   componentStyles: {
-    workspaceBackgroundColour: '#1e1e1e',
+    workspaceBackgroundColour: '#010101',
     toolboxBackgroundColour: '#333',
     toolboxForegroundColour: '#fff',
     flyoutBackgroundColour: '#252526',
