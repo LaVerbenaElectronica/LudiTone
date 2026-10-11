@@ -16,7 +16,7 @@ Blockly.Blocks['loop'] = {
             .appendField('repetir con ritmo')
             .appendField(new Blockly.FieldTextInput('∞', repsValidator), 'reps')
             .appendField('veces a velocidad')
-            .appendField(new Blockly.FieldDropdown([["muy lento","2n"],["lento", "4n"], ["medio", "8n"], ["rápido", "16n"], ["muy rápido","32n"]]), "times");
+            .appendField(new Blockly.FieldDropdown([["muy lento", "4"], ["lento", "2"], ["medio", "1"], ["rápido", "0.5"], ["muy rápido", "0.25"]]), "times");
         this.appendStatementInput('DO')
             .appendField('hacer');
         this.appendDummyInput()

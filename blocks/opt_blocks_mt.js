@@ -108,7 +108,7 @@ Blockly.Blocks['opt_mt_volume'] = {
     init: function () {
         this.appendDummyInput()
             .appendField("volumen")
-            .appendField(new Blockly.FieldNumber(1, 0, 10, 0.01), "vol");
+            .appendField(new Blockly.FieldNumber(0.5, 0, 10, 0.01), "vol");
         this.setOutput(true, "options");
         this.setColour(210);
     }
