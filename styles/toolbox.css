@@ -75,14 +75,14 @@ body.basic-mode .blocklyTreeRow {
 
 /* Flyout (panel de bloques desplegable) */
 .blocklyFlyoutBackground {
-    fill: #b9cadb !important;
+    fill: #686868 !important;
     fill-opacity: 0.95 !important;
 }
 
 /* --- Colores por categoría --- */
 
 .blocklyTreeRow[data-category="Control"] {
-    background-color: rgb(137, 202, 255) !important;
+    background-color: #B9E8C5 !important;
     border-color: rgb(0, 140, 255) !important;
 }
 
@@ -91,7 +91,7 @@ body.basic-mode .blocklyTreeRow {
 }
 
 .blocklyTreeRow[data-category="Efectos"] {
-    background-color: rgb(255, 126, 165) !important;
+    background-color: #C66A3D !important;
     border-color: rgb(255, 0, 76) !important;
 }
 
@@ -100,7 +100,7 @@ body.basic-mode .blocklyTreeRow {
 }
 
 .blocklyTreeRow[data-category="Notas"] {
-    background-color: rgb(152, 255, 118) !important;
+    background-color: #B8BEC3 !important;
     border-color: rgb(0, 255, 8) !important;
 }
 
@@ -109,7 +109,7 @@ body.basic-mode .blocklyTreeRow {
 }
 
 .blocklyTreeRow[data-category="Opciones"] {
-    background-color: rgba(255, 235, 59, 0.5) !important;
+    background-color: #E8C547 !important;
     border-color: rgba(255, 235, 59, 0.8) !important;
 }
 
