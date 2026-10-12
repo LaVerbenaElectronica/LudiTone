@@ -33,6 +33,15 @@ Blockly.Blocks['effect_lowpassfilter'] = {
 
         this.appendDummyInput()
             .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField("Q")
+            .appendField(((function (f) {
+                f.setTooltip(`Resonancia (Q) del filtro.
+                                Valores bajos (< 7): efecto sutil
+                                Valores altos (> 7): efecto muy pronunciado`); return f;
+            })(new Blockly.FieldNumber(5, 0))), "Q");
+
+        this.appendDummyInput()
+            .setAlign(Blockly.ALIGN_RIGHT)
             .appendField("Nivel de efecto (Wet)")
             .appendField(((function (f) {
                 f.setTooltip(`Nivel de efecto (0 a 1):
@@ -55,6 +64,7 @@ Blockly.JavaScript['effect_lowpassfilter'] = function (block) {
     let baseFrequency = block.getFieldValue('BASEFREQUENCY');
     let octaves = block.getFieldValue('OCTAVES');
     let wet = block.getFieldValue('WET');
+    let q = block.getFieldValue('Q');
 
     let code = ``;
 
@@ -67,7 +77,7 @@ Blockly.JavaScript['effect_lowpassfilter'] = function (block) {
                             depth: 1,
                             baseFrequency: ${baseFrequency},
                             octaves: ${octaves},
-                            filter: { type: "lowpass", rolloff: -12, Q: 1 },
+                            filter: { type: "lowpass", rolloff: -12, Q: ${q} },
                             wet: ${wet}
                         }`;
 
